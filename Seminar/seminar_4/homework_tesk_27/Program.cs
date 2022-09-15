@@ -3,31 +3,44 @@
 452 -> 11
 82 -> 10
 9012 -> 12 */
-
-
-string sum(string number)
+internal class Program
 {
-    int i=0;
-    int length = number.Length; // отределяем длинну числа
-    int result = 0;
-    while (i<length)
+    private static void Main(string[] args)
     {
-        int count =Convert.ToInt32(number[i]);
-        result = result+count;
-        i++;
+        
+        try
+        {        
+            int sum(string? number)
+             {           
+                int length = number.Length; // отределяем длинну числа
+                int result = 0;
+                for (int i = 0; i < length; i++)
+                {
+                    int res = int.Parse($"{number[i]}");            
+                    result = result+res;
+                }
+                return result;        
+             }        
+            
+            Console.Clear();
+            Console.WriteLine("Данная программа принимает на вход число и выдаёт сумму цифр в этом числе.");
+            Console.WriteLine("Введите число и нажмите ENTER.");
+            string[] numbers = new string[0];
+            string? number = Console.ReadLine();
+            int sumNumber = sum(number);
+            Console.WriteLine($"Сумма цифр в числе -  {number} равна {sumNumber} .");
+            Console.WriteLine("Для выхода из программы нажмите любую клавишу.");
+            Console.ReadKey();
+        }
+        catch
+        {
+             Console.WriteLine("Надо было вводить число.");
+        }
+        
     }
-    return result;
 }
 
-Console.Clear();
-Console.WriteLine("Введите число и нажмите ENTER.");
-string number = Convert.ToString(Console.ReadLine());
-int res = sum(number);
-Console.WriteLine(res);
 
 
 
 
-
-
- 
