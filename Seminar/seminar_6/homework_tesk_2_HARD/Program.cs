@@ -68,7 +68,7 @@ internal class Program
                             }            
                     }
                 }
-            Console.WriteLine($"Максимальным элементом массива является число- {Min} c индексом [{index_i},{index_j}] ");    
+            Console.WriteLine($"Мминимальным элементом массива является число- {Min} c индексом [{index_i},{index_j}] ");    
         }
         try
         {
